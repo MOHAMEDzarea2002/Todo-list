@@ -1,7 +1,8 @@
 {
   "name": "todo",
   "version": "0.1.0",
-  "homepage": "https://mohamedzarea2002.github.io/Todo-List",
+  "homepage": "https://mohamedzarea2002.github.io/Todo-list",
+
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
