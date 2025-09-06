@@ -1,38 +1,49 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: ArefRuqaa !important;
+}
+/* Start ButtonS */
+.iconButton {
+  transition: all 0.5s !important;
+  -webkit-transition: all 0.5s !important;
+  -moz-transition: all 0.5s !important;
+  -ms-transition: all 0.5s !important;
+  -o-transition: all 0.5s !important;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.iconButton:hover {
+  background-color: #053494 !important;
+  box-shadow: 0px 7px 7px rgba(0,0,0,0.4);
+  
 }
+/* End ButtonS */
+/* Start Cars */
+.TodoCard:hover{
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.TodoCard:hover{
+  padding: 20px 0;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+/* End Cars */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*===== Custom Fonts ===== */
 
-.App-link {
-  color: #61dafb;
+@font-face{
+  font-family:ArefRuqaa;
+  src:url("/public/Fonts/ArefRuqaa-Bold.ttf");
+  font-weight: bold;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face{
+  font-family:ArefRuqaa;
+  src:url("/public/Fonts/ArefRuqaa-Bold.ttf");
+  font-weight: normal;
 }
+/*===== Custom Fonts ===== */

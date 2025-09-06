@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import {TodoContext} from"./context/TodoContext"
+import "./App.css";
+import TodoList from "./components/TodoList";
+import { useState } from "react";
 
+// Other Imports
+
+import { v4 as uuidv4 } from 'uuid';
+
+// End Other Imports
+// Initial Todo List
+const InitialTodo = [
+  {
+    id: uuidv4(),
+    Title: "الموضوع",
+    Details: "لتفاصيل الخاصة بالموضوع",
+    isCompleted: false,
+  },
+]
 function App() {
+  const [DataTodo, SetDataTodo] = useState(InitialTodo);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      className="App"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        padding: "20px", // علشان في مارجن من الحواف
+        direction: "rtl",
+        minHeight: "100vh",
+        boxSizing: "border-box",
+        
+        alignItems:"center"
+      }}
+    >
+      <TodoContext.Provider value={{ DataTodo, SetDataTodo }}>
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "600px", // أقصى عرض على الشاشات الكبيرة
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <TodoList />
+        </div>
+      </TodoContext.Provider>
     </div>
   );
 }
+
 
 export default App;
