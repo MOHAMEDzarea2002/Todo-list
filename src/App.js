@@ -2,6 +2,7 @@ import {TodoContext} from"./context/TodoContext"
 import "./App.css";
 import TodoList from "./components/TodoList";
 import { useState } from "react";
+import Typography from "@mui/material/Typography";
 
 // Other Imports
 
@@ -38,9 +39,14 @@ function App() {
         <div
           style={{
             width: "100%",
-            maxWidth: "600px", // أقصى عرض على الشاشات الكبيرة
+            maxWidth: "600px",
+          
           }}
+    
         >
+          <Typography gutterBottom variant="h2">
+            Special design Rawdhudha            
+          </Typography>
           <TodoList />
         </div>
       </TodoContext.Provider>

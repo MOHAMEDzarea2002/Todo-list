@@ -165,6 +165,7 @@ export default function Todo({ todo }) {
         mt: 3,
         color: "white",
       }}
+      
     >
       <CardContent>
         <Grid
